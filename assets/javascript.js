@@ -26,3 +26,19 @@
 //     .catch(function(error) {
 //         console.error(error);
 //     });
+
+function getApi() {
+    var requestUrl = "https://api.exchangerate-api.com/v4/latest/USD";
+
+    fetch(requestUrl)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+
+            console.log(data);
+
+        });
+}
+
+getApi();

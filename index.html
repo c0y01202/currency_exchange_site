@@ -44,18 +44,31 @@
                 <!--Place the interactive layout for the API here-->
                 <div class="container">
 
+                    <!-- what value is to be converted -->
+                    Value to Convert:
+                    <input class="inputBox" type="text" placeholder="0.00" id="inputVal">
+
+                    </input>
+
                     <!-- where the information is to be selected -->
                     <div>
                         <!-- first dropdown -->
-                        <select id="dDown1">
+                        From: <select id="dDown1">
                       <option value=""> Select One... </option>
-                      <option value="USD">USD</option>
-                    </select> to
+                      <option value="USD">USD (United States Dollar)</option>
+                      <option value="RUB">RUB (Russian Ruble)</option>
+                      <option value="CAN">CAN (Canadian Dollar)</option>
+                      <option value="GB">GBP (British Pound Sterling)</option>
+                      
+                    </select>
                         <!-- second dropdown -->
 
-                        <select id="dDown2">
+                        To: <select id="dDown2">
                       <option value=""> Select One... </option>
-                      <option value="USD">USD</option>
+                      <option value="USD">USD (United States Dollar)</option>
+                      <option value="RUB">RUB (Russian Ruble)</option>
+                      <option value="CAN">CAN (Canadian Dollar)</option>
+                      <option value="GB">GBP (British Pound Sterling)</option>
                     </select>
 
                         <!-- where the conversion will display -->
