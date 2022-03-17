@@ -18,7 +18,7 @@ The purpose of this website is to help people who are travelling and who have in
 
 Our target market includes people who are travelling abroad, refugees and people who have invested in these currencies on the foreign exchange markets.
 
-As a person who would like to travel from the U.S. to the U.K. or E.U. and who has invested in the foriegn exchange I want to know what the climate will be like and what value my currency has. To determine this I simply access the Team 2 website and select which of the 4 currencies I would like to convert.
+As a person who would like to travel from the U.S. to the U.K. or E.U. and who has invested in the foreign exchange I want to know what the climate will be like and what value my currency has. To determine this I simply access the Team 2 website and select which of the 4 currencies I would like to convert.
 
 # Description of Site
 
