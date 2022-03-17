@@ -28,8 +28,66 @@
 //     });
 
 
+const url = "https://api.exchangerate-api.com/v4/latest/USD";
 
 
+//variable handles
+var inputBox = document.querySelector(".inputBox");
+var convert = document.querySelector(".convert");
+var selOne = document.querySelector(".dDown1");
+var selTwo = document.querySelector(".dDown2");
+var conversionVal = document.querySelector(".conversionVal");
+var displayConv = document.getElementById("displayConv");
+var selOneHolder;
+var selTwoHolder;
+var apiVal;
+
+
+
+
+
+selOne.addEventListener("currency", (event) => {
+    selOneHolder = '${event.target.value}';
+});
+
+selTwo.addEventListener("currency", (event) => {
+    selTwoHolder = "${event.target.value}";
+});
+
+inputBox.addEventListener("input", amend);
+
+function amend(val) {
+    apiVal = val.target.value;
+}
+
+convert.addEventListener("click", obtainRes);
+
+function obtainRes() {
+    fetch(url)
+        .then(currency => {
+            return currency.json();
+        }).then(displayRes);
+}
+
+function displayRes(currency) {
+
+    let firstRate = currency.rates[selOne];
+    let secRate = currency.rates[selTwo];
+    conversionVal.innerHTML = ((secRate / firstRate) * inputBox).toFixed(2);
+    displayConv.style.display = "block";
+}
+
+
+
+
+
+//reset the results
+function reset() {
+    window.location.reload();
+    document.getElementsByClassName(".conversionVal").innerHTML = "";
+};
+
+//test data retrieval
 
 function getApi() {
     var requestUrl = "https://api.exchangerate-api.com/v4/latest/USD";
@@ -44,10 +102,5 @@ function getApi() {
 
         });
 }
-
-function reset() {
-    window.location.reload();
-    document.getElementsByClassName("conversionVal").innerHTML = "";
-};
 
 getApi();
