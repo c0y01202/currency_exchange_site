@@ -45,30 +45,34 @@ var apiVal;
 
 
 
-
+//utilize selection from first dropdown
 selOne.addEventListener("currency", (event) => {
     selOneHolder = '${event.target.value}';
 });
 
+//utilize selection from second dropdown
 selTwo.addEventListener("currency", (event) => {
     selTwoHolder = "${event.target.value}";
 });
 
+//get a handle on the input provided
 inputBox.addEventListener("input", amend);
 
 function amend(val) {
     apiVal = val.target.value;
 }
 
+//when convert button is clicked
 convert.addEventListener("click", obtainRes);
 
 function obtainRes() {
     fetch(url)
         .then(currency => {
             return currency.json();
-        }).then(displayRes);
+        }).then(displayRes)
 }
 
+//conversion calculation
 function displayRes(currency) {
 
     let firstRate = currency.rates[selOne];
