@@ -47,12 +47,12 @@ var apiVal;
 
 //utilize selection from first dropdown
 selOne.addEventListener("currency", (event) => {
-    selOneHolder = '${event.target.value}';
+    selOneHolder = $(event.target.value);
 });
 
 //utilize selection from second dropdown
 selTwo.addEventListener("currency", (event) => {
-    selTwoHolder = "${event.target.value}";
+    selTwoHolder = $(event.target.value);
 });
 
 //get a handle on the input provided
@@ -69,16 +69,33 @@ function obtainRes() {
     fetch(url)
         .then(currency => {
             return currency.json();
-        }).then(displayRes)
+        }).then(data => {
+
+            console.log(data.rates);
+            displayRes(data.rates)
+        })
 }
 
 //conversion calculation
 function displayRes(currency) {
+    console.log(currency);
 
-    let firstRate = currency.rates[selOne];
-    let secRate = currency.rates[selTwo];
-    conversionVal.innerHTML = ((secRate / firstRate) * inputBox).toFixed(2);
-    displayConv.style.display = "block";
+    var one = (selOne.value);
+    var two = (selTwo.value);
+
+    let firstRate = currency[one];
+    let secRate = currency[two];
+
+    // console.log(secRate);
+    // console.log(firstRate);
+    // console.log(parseFloat(inputBox.value));
+    // console.log(((parseFloat(secRate) / parseFloat(firstRate)) * parseFloat(inputBox)));
+
+    conversionVal.innerHTML = ((secRate / firstRate) * parseFloat(inputBox.value)).toFixed(2);
+
+    displayConv.style.display = "";
+
+
 }
 
 
@@ -93,18 +110,18 @@ function reset() {
 
 //test data retrieval
 
-function getApi() {
-    var requestUrl = "https://api.exchangerate-api.com/v4/latest/USD";
+// function getApi() {
+//     var requestUrl = "https://api.exchangerate-api.com/v4/latest/USD";
 
-    fetch(requestUrl)
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
+//     fetch(requestUrl)
+//         .then(function(response) {
+//             return response.json();
+//         })
+//         .then(function(data) {
 
-            console.log(data);
+//             console.log(data);
 
-        });
-}
+//         });
+// }
 
-getApi();
+// getApi();
