@@ -39,7 +39,7 @@
     float: left;
     font-family: "Source Sans Pro";
     color: #a5a5a5;
-    line-height: 24px;
+    line-height: 22px;
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: justify;
@@ -51,13 +51,18 @@
     margin-right: 0px;
 }
 
+.icon_align {
+    margin-bottom: 10px;
+    margin: 5px auto;
+}
+
 .row .columns p {
     padding-left: 10%;
     padding-right: 10%;
 }
 
 .container .columns h4 {
-    text-align: center;
+    align-content: center;
     color: #05282e;
 }
 
@@ -69,6 +74,7 @@
     clear: left;
     border-bottom: 2px solid #2c9ab7;
 }
+
 
 .left_article {
     background-color: #ffffff;
@@ -411,14 +417,12 @@ body {
 
 @media (min-width: 1001px) {}
 
-.thumbnail {
-    width: 100px;
+.icon_align {
     border-radius: 200px;
-    height: 100px;
     margin-left: auto;
 }
 
-.thumbnail_align {
+.icon_align {
     text-align: center;
 }
 
