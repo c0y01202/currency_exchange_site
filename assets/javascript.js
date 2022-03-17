@@ -27,6 +27,10 @@
 //         console.error(error);
 //     });
 
+
+
+
+
 function getApi() {
     var requestUrl = "https://api.exchangerate-api.com/v4/latest/USD";
 
@@ -40,5 +44,10 @@ function getApi() {
 
         });
 }
+
+function reset() {
+    window.location.reload();
+    document.getElementsByClassName("conversionVal").innerHTML = "";
+};
 
 getApi();

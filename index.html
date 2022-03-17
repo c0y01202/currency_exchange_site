@@ -8,6 +8,8 @@
     <title>International Currency Exchange Site</title>
     <link href="./assets/style.css" rel="stylesheet">
 
+
+
 </head>
 
 <body>
@@ -67,13 +69,15 @@
                         <!-- listener point -->
                         <div>
                             <button type="submit">Convert</button>
-                            <button type="reset">Reset</button>
+                            <button onclick="reset()">Reset</button>
                         </div>
 
                         <!-- where the conversion will display -->
-                        <div id="displayConv">
+                        <div id="displayConv" class="text-center">
 
-
+                            <span class="conversionVal">
+                               
+                           </span>
 
                         </div>
 
@@ -150,8 +154,7 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
     </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
-    </script>
+
     <script src="./assets/javascript.js"></script>
 
 
