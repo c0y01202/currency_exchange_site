@@ -27,11 +27,7 @@
 //         console.error(error);
 //     });
 
-
-const url = "https://api.exchangerate-api.com/v4/latest/USD";
-
-
-//variable handles
+//currency variable handles
 var inputBox = document.querySelector(".inputBox");
 var convert = document.querySelector(".convert");
 var selOne = document.querySelector(".dDown1");
@@ -42,6 +38,27 @@ var selOneHolder;
 var selTwoHolder;
 var apiVal;
 
+
+
+//currency api
+const url = "https://api.exchangerate-api.com/v4/latest/USD";
+const weather = "http://api.openweathermap.org/geo/1.0/direct?q=&limit=1&appid=41f9ce5c293e6a6ed2155651cd21af58";
+
+function getApi() {
+    var weather = "http://api.openweathermap.org/geo/1.0/direct?q=US-TX&limit=1&appid=41f9ce5c293e6a6ed2155651cd21af58";
+
+    fetch(weather)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+
+            console.log(data);
+
+        });
+}
+
+getApi();
 
 
 
@@ -108,10 +125,12 @@ function reset() {
     document.getElementsByClassName(".conversionVal").innerHTML = "";
 };
 
+
+
 //test data retrieval
 
 // function getApi() {
-//     var requestUrl = "https://api.exchangerate-api.com/v4/latest/USD";
+//     var requestUrl = "";
 
 //     fetch(requestUrl)
 //         .then(function(response) {
