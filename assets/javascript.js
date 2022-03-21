@@ -38,14 +38,32 @@ var selOneHolder;
 var selTwoHolder;
 var apiVal;
 
+//weather api key
+// 41f9ce5c293e6a6ed2155651cd21af58
 
 
 //currency api
 const url = "https://api.exchangerate-api.com/v4/latest/USD";
+
+//weather api
 const weather = "http://api.openweathermap.org/geo/1.0/direct?q=&limit=1&appid=41f9ce5c293e6a6ed2155651cd21af58";
 
 function getApi() {
-    var weather = "http://api.openweathermap.org/geo/1.0/direct?q=US-TX&limit=1&appid=41f9ce5c293e6a6ed2155651cd21af58";
+    var weather = "http://api.openweathermap.org/geo/1.0/zip?zip=78244&appid=41f9ce5c293e6a6ed2155651cd21af58";
+
+    fetch(weather)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+
+            console.log(data);
+
+        });
+}
+
+function getWApi() {
+    var weather = "http://api.openweathermap.org/geo/1.0/reverse?lat=29.4793&lon=-98.3476&limit=5&appid=41f9ce5c293e6a6ed2155651cd21af58";
 
     fetch(weather)
         .then(function(response) {
@@ -59,6 +77,11 @@ function getApi() {
 }
 
 getApi();
+getWApi();
+
+
+
+
 
 
 
@@ -88,14 +111,14 @@ function obtainRes() {
             return currency.json();
         }).then(data => {
 
-            console.log(data.rates);
+
             displayRes(data.rates)
         })
 }
 
 //conversion calculation
 function displayRes(currency) {
-    console.log(currency);
+
 
     var one = (selOne.value);
     var two = (selTwo.value);
