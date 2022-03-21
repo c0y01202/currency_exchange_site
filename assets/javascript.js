@@ -54,41 +54,43 @@ const url = "https://api.exchangerate-api.com/v4/latest/USD";
 // //weather api
 const weathUrl = "http://api.openweathermap.org/geo/1.0/direct?q=&limit=1&appid=41f9ce5c293e6a6ed2155651cd21af58";
 
-function getZipApi() {
-    var weather = "http://api.openweathermap.org/geo/1.0/zip?zip=78244&appid=41f9ce5c293e6a6ed2155651cd21af58";
+// function getZipApi() {
+//     var weather = "http://api.openweathermap.org/geo/1.0/zip?zip=78244&appid=41f9ce5c293e6a6ed2155651cd21af58";
 
-    fetch(weather)
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
+//     fetch(weather)
+//         .then(function(response) {
+//             return response.json();
+//         })
+//         .then(function(data) {
 
-            console.log(data);
+//             console.log(data);
 
-        });
-}
+//         });
+// }
 
-function getWApi() {
-    var weather = "https://api.openweathermap.org/data/2.5/weather?lat=29.4793&lon=-98.3476&appid=41f9ce5c293e6a6ed2155651cd21af58";
+// function getWApi() {
+//     var weather = "https://api.openweathermap.org/data/2.5/weather?lat=29.4793&lon=-98.3476&appid=41f9ce5c293e6a6ed2155651cd21af58";
 
-    fetch(weather)
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
+//     fetch(weather)
+//         .then(function(response) {
+//             return response.json();
+//         })
+//         .then(function(data) {
 
-            console.log(data);
+//             console.log(data);
 
-        });
-}
+//         });
+// }
 
-getZipApi();
-getWApi();
+// getZipApi();
+// getWApi();
 
-//get the zip code
+//convert from kelvin to f
 function conversion(k) {
     return ((k - 273.15) * 9 / 5 + 32).toFixed(2);
 }
+
+//apply the value and display in weatherResult
 
 submit.addEventListener("click", function() {
     fetch("https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode.value + "&appid=41f9ce5c293e6a6ed2155651cd21af58")
@@ -96,7 +98,7 @@ submit.addEventListener("click", function() {
         // .then(data => console.log(zipCode.value))
         .then(data => {
             temperature = data.main.temp;
-            city = data.main.name;
+
             // console.log(city);
 
             // conversion(temperature);
