@@ -75,10 +75,10 @@
 
                         <!-- where the conversion will display -->
                         <div id="displayConv" class="text-center">
-                            <h2> Result
+                            <h3> Result:
                                 <span class="conversionVal" style="color:blue;">
                            </span>
-                            </h2>
+                            </h3>
                         </div>
 
                     </div>
@@ -95,11 +95,13 @@
             <aside class="right_article"><img src="assets/images/main_placeholder.png" alt="" width="400" height="200" class="placeholder" /> </aside>
         </section>
 
+        <!-- weather api ------------------------------------------------------------------------- -->
         <article class="left_article">
             <h3>Current Weather App</h3>
             <!--Place the interactive layout for the API here-->
             <div class="container">
 
+                <!-- inquire of what the zip of weather update -->
                 <input class="zip" type="text" placeholder="Your Zip Code" id="zip">
 
                 </input>
@@ -107,6 +109,12 @@
                 <button class="submit">Submit</button>
 
                 <!-- where the weather for that zip will display -->
+
+                <div id="weather">
+                    <h3>Temperature (°F):
+                        <span class="weatherRes" style="color:green"></span>
+                    </h3>
+                </div>
 
 
 

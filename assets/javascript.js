@@ -41,14 +41,20 @@ var apiVal;
 //weather api key
 // 41f9ce5c293e6a6ed2155651cd21af58
 
+var zipCode = document.querySelector(".zip");
+var submit = document.querySelector(".submit");
+var weather = document.querySelector(".weather");
+var weatherResult = document.querySelector(".weatherRes");
+var zipHolder = "";
+
+
 
 //currency api
 const url = "https://api.exchangerate-api.com/v4/latest/USD";
+// //weather api
+const weathUrl = "http://api.openweathermap.org/geo/1.0/direct?q=&limit=1&appid=41f9ce5c293e6a6ed2155651cd21af58";
 
-//weather api
-const weather = "http://api.openweathermap.org/geo/1.0/direct?q=&limit=1&appid=41f9ce5c293e6a6ed2155651cd21af58";
-
-function getApi() {
+function getZipApi() {
     var weather = "http://api.openweathermap.org/geo/1.0/zip?zip=78244&appid=41f9ce5c293e6a6ed2155651cd21af58";
 
     fetch(weather)
@@ -63,7 +69,7 @@ function getApi() {
 }
 
 function getWApi() {
-    var weather = "http://api.openweathermap.org/geo/1.0/reverse?lat=29.4793&lon=-98.3476&limit=5&appid=41f9ce5c293e6a6ed2155651cd21af58";
+    var weather = "https://api.openweathermap.org/data/2.5/weather?lat=29.4793&lon=-98.3476&appid=41f9ce5c293e6a6ed2155651cd21af58";
 
     fetch(weather)
         .then(function(response) {
@@ -76,8 +82,56 @@ function getWApi() {
         });
 }
 
-getApi();
+getZipApi();
 getWApi();
+
+//get the zip code
+function conversion(k) {
+    return ((k - 273.15) * 9 / 5 + 32).toFixed(2);
+}
+
+submit.addEventListener("click", function() {
+    fetch("https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode.value + "&appid=41f9ce5c293e6a6ed2155651cd21af58")
+        .then(res => res.json())
+        // .then(data => console.log(zipCode.value))
+        .then(data => {
+            temperature = data.main.temp;
+            city = data.main.name;
+            // console.log(city);
+
+            // conversion(temperature);
+            // console.log(conversion(temperature));
+
+            weatherResult.innerHTML = conversion(temperature);
+
+
+
+
+        })
+})
+
+// function add(val) {
+//     zipHolder = val.target.value;
+// }
+
+// //when convert button is clicked
+// submit.addEventListener("click", wRes);
+
+// function wRes() {
+//     fetch(weathUrl)
+//         .then(currency => {
+
+//             return currency.json();
+//         }).then(data => {
+
+
+
+
+//             displayRes(data.temp)
+//         })
+// }
+
+
 
 
 
@@ -133,7 +187,6 @@ function displayRes(currency) {
 
     conversionVal.innerHTML = ((secRate / firstRate) * parseFloat(inputBox.value)).toFixed(2);
 
-    displayConv.style.display = "";
 
 
 }
