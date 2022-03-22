@@ -30,15 +30,19 @@
                     <div class="container control">
                         <!-- what value is to be converted -->
                         Value to Convert:
-                        <input class="input is-normal " type="text" placeholder="0.00" id="inputVal">
+                        <br>
+                        <input class="input is-normal" style="width:41%" type="text" placeholder="0.00" id="inputVal">
                         </input>
                     </div>
-
-            <!-- where the information is to be selected -->
-                                <!-- first dropdown -->
+            <figure class="image" id="globe">
+                <img src="./assets/images/main_placeholder.png">
+            </figure>
+        
+        <!-- where the information is to be selected -->                       
         <nav class="level">
                 <div class="level-left">
                     <p class="control is-5">
+                            <!-- first dropdown -->
                         <div class="select ">
                             From: <select class="dDown1 ">
                                 <option value=""> Select One... </option>
@@ -49,7 +53,7 @@
                             </select>
                         </div>
             
-                                <!-- second dropdown -->
+                            <!-- second dropdown -->
                         <div class="select">
                             To: <select class="dDown2 column">
                                  <option value=""> Select One... </option>
@@ -71,11 +75,13 @@
                 
             </div> 
         
-            <div id="displayConv">
-                <h3> Result:
-                    <span class="conversionVal" style="color:blue;">
-                    </span>
-                </h3>
+            <div id="displayConv" class="container">
+                <p class="control>">
+                    <h3> Result:
+                        <span class="conversionVal" style="color:blue;">
+                        </span>
+                    </h3>
+                </p>
             </div>
         </nav>
 </article>
