@@ -342,14 +342,11 @@ ul {
   margin: 0;
   padding: 0;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+h3 {
   font-size: 100%;
   font-weight: 400;
+  margin-left: 87px;
 }
 ul {
   list-style: none;
@@ -5245,7 +5242,8 @@ button.dropdown-item.is-active {
 }
 .level-item {
   align-items: center;
-  display: flex;
+  margin-left: 20px;
+  margin-top: 42px;
   justify-content: center;
 }
 .level-item .subtitle,
