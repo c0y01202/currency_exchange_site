@@ -28,7 +28,7 @@
 //     });
 
 //currency variable handles
-var inputBox = document.querySelector(".inputBox");
+var inputBox = document.querySelector(".input");
 var convert = document.querySelector(".convert");
 var selOne = document.querySelector(".dDown1");
 var selTwo = document.querySelector(".dDown2");
