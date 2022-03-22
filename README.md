@@ -1,10 +1,4 @@
-# currency_exchange_site
-
 # Purpose of Currency Exchange Website Team 2
-
-As an investor in the stock market and a trader of world commodities I am interested in how currency is affected by global events.
-I want to know what the value of my currency is and will be given the recent events occuring in Europe and Russia.
-If I travel I will also need to know the conversion rate of my money in another country.
 
 # User Story
 
@@ -30,12 +24,11 @@ https://c0y01202.github.io/currency_exchange_site/
 
 # External Resources
 
-1. https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
-2. https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js
-3. https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js
-4. https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js
-5. https://money.cnn.com/data/currencies/
+https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js
+https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js
+https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js
+https://money.cnn.com/data/currencies/
 
-# Authors of this website:
-
+Authors of this website:
 Claudia Chittim, Michael Gaytan and Amanda Hernandez. Copyright 2022.
