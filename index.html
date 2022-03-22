@@ -10,77 +10,81 @@
 </head>
 
 <body>
-
+                <!--Acts as Header-->
+<section class="section">
     <div class="container">
         <section class="hero is-small is-primary">
             <div class="hero-body">
                 <h1 class="title has-text-centered has-text-weight-bold is-size-1"> SIMPLE CURRENCY EXCHANGE</h1>
-                <nav class="secondary_header" id="menu">
-
-                </nav>
             </div>
         </section>
+</section>
+
 
 <section class="section">
-
-        <div class="field container">
-            <div class="control block">
-                <!--Add content to the lines of text below-->
-
-                <article class="left_article">
-                    <h3 class="title is-3">Currency Exchange API</h3>
-                    <!--Place the interactive layout for the API here-->
-                    <div class="container is-one-quarter">
+    <div class="container block">
+            <!--Add content to the lines of text below-->
+            <article class="left_article">
+                <h3 class="title is-3">Currency Exchange API</h3>
+                 <!--Place the interactive layout for the API here-->
+                    <div class="container control">
                         <!-- what value is to be converted -->
                         Value to Convert:
                         <input class="input is-normal " type="text" placeholder="0.00" id="inputVal">
                         </input>
                     </div>
-            </div>
-        </div>
 
             <!-- where the information is to be selected -->
-        <div class="container select block">
                                 <!-- first dropdown -->
-                    From: <select class="dDown1">
-                        <option value=""> Select One... </option>
-                        <option value="USD">USD (United States Dollar)</option>
-                        <option value="RUB">RUB (Russian Ruble)</option>
-                        <option value="CAD">CAD (Canadian Dollar)</option>
-                        <option value="GBP">GBP (British Pound Sterling)</option>
-                      </select>
-                                <!-- second dropdown -->
-                                  To: <select class="dDown2">
-                        <option value=""> Select One... </option>
-                        <option value="USD">USD (United States Dollar)</option>
-                        <option value="RUB">RUB (Russian Ruble)</option>
-                        <option value="CAD">CAD (Canadian Dollar)</option>
-                        <option value="GBP">GBP (British Pound Sterling)</option>
-                      </select>
+            <div class="field is-grouped">
+                    <p class="control">
+                        <div class="select ">
+                            From: <select class="dDown1 ">
+                                <option value=""> Select One... </option>
+                                <option value="USD">USD (United States Dollar)</option>
+                                <option value="RUB">RUB (Russian Ruble)</option>
+                                <option value="CAD">CAD (Canadian Dollar)</option>
+                                <option value="GBP">GBP (British Pound Sterling)</option>
+                            </select>
+                        </div>
             
-                                <!-- listener point -->
-                        <div class="block">
-                            <button class="button convert">Convert</button>
-                            <button class="button" onclick="reset()">Reset</button>
+                                <!-- second dropdown -->
+                        <div class="select">
+                            To: <select class="dDown2 column">
+                                 <option value=""> Select One... </option>
+                                 <option value="USD">USD (United States Dollar)</option>
+                                 <option value="RUB">RUB (Russian Ruble)</option>
+                                 <option value="CAD">CAD (Canadian Dollar)</option>
+                                 <option value="GBP">GBP (British Pound Sterling)</option>
+                            </select>
                         </div>
-                         <!-- where the conversion will display -->
-                        <div id="displayConv" class="container block">
-                            <h3> Result:
-                                <span class="conversionVal" style="color:blue;">
-                                </span>
-                            </h3>
-                        </div>
-         </div>
+                    </p>
+
+                    <p class="control">
+                        <!-- listener point -->
+                        <button class="button convert">Convert</button>
+                        <button class="button" onclick="reset()">Reset</button>
+               
+                    </p>
+                
+            </div> 
+        
+            <div id="displayConv">
+                <h3> Result:
+                    <span class="conversionVal" style="color:blue;">
+                    </span>
+                </h3>
+            </div>
+    </div>
 </article>
 </section>
+
     
-        <br/>
-        <br/>
        <!--<figure class="image">--> 
         <!--<img class="is-rounded" src="./assets/images/main_placeholder.png">--> 
          <!--</figure>-->
 <section class="section">
-        <!-- weather api ------------------------------------------------------------------------- -->\<section class="container block">
+        <!-- weather api ------------------------------------------------------------------------- --><section class="container block">
     <div class="block">
             <h3 class="title is-3">Current Weather App</h3>
             <!--Place the interactive layout for the API here-->
@@ -97,7 +101,6 @@
                 <div id="weather" class="container block">
                     <h3>Temperature (°F):
                         <span class="weatherRes" style="color:green"></span>
-
                     </h3>
                 </div>
             </div>
