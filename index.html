@@ -2,183 +2,141 @@
 <HTML>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>International Currency Exchange Site</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500&display=swap" rel="stylesheet">
-
-    <link href="./assets/style.css" rel="stylesheet">
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIMPLE CURRENCY EXCHANGE</title>
+    <link rel="stylesheet" href="./mybulma/css/mystyles.css" />
 </head>
 
 <body>
 
     <div class="container">
-
-        <header>
-
-            <div class="primary_header">
-
-                <h1 class="title"> SIMPLE CURRENCY EXCHANGE</h1>
-
+        <section class="hero is-small is-primary">
+            <div class="hero-body">
+                <h1 class="title has-text-centered has-text-weight-bold is-size-1"> SIMPLE CURRENCY EXCHANGE</h1>
                 <nav class="secondary_header" id="menu">
 
-
                 </nav>
-
             </div>
-
-
-
-        </header>
-
-
-        <section>
-            <!--Add content to the lines of text below-->
-            <h2 class="noDisplay">Main Content</h2>
-            <article class="left_article">
-                <h3>Currency Exchange API</h3>
-                <!--Place the interactive layout for the API here-->
-                <div class="container">
-
-                    <!-- what value is to be converted -->
-                    Value to Convert:
-                    <input class="inputBox" type="text" placeholder="0.00" id="inputVal">
-
-                    </input>
-
-                    <!-- where the information is to be selected -->
-                    <div>
-                        <!-- first dropdown -->
-                        From: <select class="dDown1">
-              <option value=""> Select One... </option>
-              <option value="USD">USD (United States Dollar)</option>
-              <option value="RUB">RUB (Russian Ruble)</option>
-              <option value="CAD">CAD (Canadian Dollar)</option>
-              <option value="GBP">GBP (British Pound Sterling)</option>
-
-            </select>
-                        <!-- second dropdown -->
-
-                        To: <select class="dDown2">
-              <option value=""> Select One... </option>
-              <option value="USD">USD (United States Dollar)</option>
-              <option value="RUB">RUB (Russian Ruble)</option>
-              <option value="CAD">CAD (Canadian Dollar)</option>
-              <option value="GBP">GBP (British Pound Sterling)</option>
-            </select>
-
-                        <!-- listener point -->
-                        <div>
-                            <button class="convert">Convert</button>
-                            <button onclick="reset()">Reset</button>
-                        </div>
-
-                        <!-- where the conversion will display -->
-                        <div id="displayConv" class="text-center">
-                            <h3> Result:
-                                <span class="conversionVal" style="color:blue;">
-                           </span>
-                            </h3>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-
-            </article>
-
-
-
-
-            <aside class="right_article"><img src="assets/images/main_placeholder.png" alt="" width="400" height="200" class="placeholder" /> </aside>
         </section>
 
-        <!-- weather api ------------------------------------------------------------------------- -->
-        <article class="left_article">
-            <h3>Current Weather App</h3>
+<section class="section">
+
+        <div class="field container">
+            <div class="control block">
+                <!--Add content to the lines of text below-->
+
+                <article class="left_article">
+                    <h3 class="title is-3">Currency Exchange API</h3>
+                    <!--Place the interactive layout for the API here-->
+                    <div class="container is-one-quarter">
+                        <!-- what value is to be converted -->
+                        Value to Convert:
+                        <input class="input is-normal " type="text" placeholder="0.00" id="inputVal">
+                        </input>
+                    </div>
+            </div>
+        </div>
+
+            <!-- where the information is to be selected -->
+        <div class="container select block">
+                                <!-- first dropdown -->
+                    From: <select class="dDown1">
+                        <option value=""> Select One... </option>
+                        <option value="USD">USD (United States Dollar)</option>
+                        <option value="RUB">RUB (Russian Ruble)</option>
+                        <option value="CAD">CAD (Canadian Dollar)</option>
+                        <option value="GBP">GBP (British Pound Sterling)</option>
+                      </select>
+                                <!-- second dropdown -->
+                                  To: <select class="dDown2">
+                        <option value=""> Select One... </option>
+                        <option value="USD">USD (United States Dollar)</option>
+                        <option value="RUB">RUB (Russian Ruble)</option>
+                        <option value="CAD">CAD (Canadian Dollar)</option>
+                        <option value="GBP">GBP (British Pound Sterling)</option>
+                      </select>
+            
+                                <!-- listener point -->
+                        <div class="block">
+                            <button class="button convert">Convert</button>
+                            <button class="button" onclick="reset()">Reset</button>
+                        </div>
+                         <!-- where the conversion will display -->
+                        <div id="displayConv" class="container block">
+                            <h3> Result:
+                                <span class="conversionVal" style="color:blue;">
+                                </span>
+                            </h3>
+                        </div>
+         </div>
+</article>
+</section>
+    
+        <br/>
+        <br/>
+       <!--<figure class="image">--> 
+        <!--<img class="is-rounded" src="./assets/images/main_placeholder.png">--> 
+         <!--</figure>-->
+<section class="section">
+        <!-- weather api ------------------------------------------------------------------------- -->\<section class="container block">
+    <div class="block">
+            <h3 class="title is-3">Current Weather App</h3>
             <!--Place the interactive layout for the API here-->
-            <div class="container">
+            <div class="block">
 
                 <!-- inquire of what the zip of weather update -->
-                <input class="zip" type="text" placeholder="Your Zip Code" id="zip">
-
+                <input class="input zip" type="text" placeholder="Your Zip Code" id="zip">
                 </input>
 
-                <button class="submit">Submit</button>
+                <button class=" button submit">Submit</button>
 
                 <!-- where the weather for that zip will display -->
 
-                <div id="weather">
+                <div id="weather" class="container block">
                     <h3>Temperature (°F):
                         <span class="weatherRes" style="color:green"></span>
 
                     </h3>
                 </div>
-
-
-
-
-
-
             </div>
 
+    </div>
+</section>
 
-        </article>
+<section class="section">
+        <div class="columns">
 
-        <div class="row">
-
-            <div class="columns">
-                <img src="./assets/images/united-states.png" class="icon_align" alt="usa flag icon"/>
-                <h4>USD: $ </h4>
+            <div class="column">
+                <p class="thumbnail_align"> <img src="assets/images/united-states.png" alt="" class="thumbnail" /> </p>
+                <h4>USD: &#36;</h4>
                 <p>The US Dollar is divided into 100 cents. The U.S. dollar is predominantly the standard currency unit in which goods are quoted and traded in the global communithy markets.</p>
             </div>
 
-            <div class="columns">
-                <img src="./assets/images/canada.png" class="icon_align" alt="canada flag icon"/>
-                <h4>CAD: $</h4>
+            <div class="column">
+                <p class="thumbnail_align"> <img src="assets/images/canada.png" alt="" class="thumbnail" /> </p>
+                <h4>CAD: &#36;</h4>
                 <p>The Canadian dollar is divided into 100 cents. It accounts for approximately 2% of global reserves</p>
             </div>
 
-            <div class="columns">
-                <img src="./assets/images/united-kingdom.png" class="icon_align" alt="great britian flag icon"/>
+            <div class="column">
+                <p class="thumbnail_align"> <img src="assets/images/united-kingdom.png" alt="" class="thumbnail" /> </p>
                 <h4>GBP: &#163;</h4>
                 <p>The British pound is subdivided into 100 pence. The pound and the euro fluctuate against one another.s </p>
             </div>
 
-            <div class="columns">
-                <img src="./assets/images/russia.png" class="icon_align" alt="great britian flag icon"/>
-                <h4>RUB: &#8381; </h4>
+            <div class="column">
+                <p class="thumbnail_align"> <img src="assets/images/russia.png" alt="" class="thumbnail" /> </p>
+                <h4>RUB: &#8381;</h4>
                 <p>The Russian ruble is subdivided into 100 kopeks. The ruble is the 17th most traded commodity in the world.
                 </p>
             </div>
 
         </div>
-
-        <div class="row blockDisplay">
-            <div class="column_half left_half">
-                <h2 class="column_title">LEFT COLUMN</h2>
-            </div>
-
-            <div class="column_half right_half">
-                <h2 class="column_title">RIGHT COLUMN</h2>
-            </div>
-        </div>
-
-        <div class="social">
-            <p class="social_icon"><img src="assets/images/bkg_06.jpg" width="100" alt="" class="thumbnail" /></p>
-            <p class="social_icon"><img src="assets/images/bkg_06.jpg" width="100" alt="" class="thumbnail" /></p>
-            <p class="social_icon"><img src="assets/images/bkg_06.jpg" width="100" alt="" class="thumbnail" /></p>
-            <p class="social_icon"><img src="assets/images/bkg_06.jpg" width="100" alt="" class="thumbnail" /></p>
-        </div>
-
-
-        <footer class="secondary_header footer">
+</section>
+       
+        <footer class="secondary_header footer container block">
             <div class="copyright">&copy;2022 - <strong>Group 2 Authors: Claudia Chittim, Amanda Hernandez and Michael
           Gaytan</strong></div>
         </footer>
