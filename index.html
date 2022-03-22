@@ -91,7 +91,8 @@
 <section class="section">
     <div class="container block">
         <div class="tile is-ancestor">
-            <div class="tile is-3 is-vertical is-parent">
+            <div class="tile is-3 is-vertical is-parent has-text-centered">
+                <h1 class="title is-3">Currencies Explained</h1>
                  <div class="tile is-child box">
                     <p class="thumbnail_align"> <img src="assets/images/united-states.png" alt="" class="thumbnail" /> </p>
                     <h4>USD: &#36;</h4>
@@ -114,24 +115,25 @@
                     <p>The Russian ruble is subdivided into 100 kopeks. The ruble is the 17th most traded commodity in the world.</p>
                 </div>
             </div>
-            <div class="tile is-parent">
-                <h1 class="title is-3">Current Weather</h1>
-                <!--Place the interactive layout for the API here-->
-                <div class="block">
-
-                <!-- inquire of what the zip of weather update -->
-                <input class="input zip" type="text" placeholder="Your Zip Code" id="zip">
-                </input>
-
-                <button class=" button submit">Submit</button>
-
-                <!-- where the weather for that zip will display -->
-
-                <div id="weather" class="container block">
-                    <h3>Temperature (°F):
-                        <span class="weatherRes" style="color:green"></span>
-                    </h3>
-                </div>
+            <div class="tile is-parent has-text-centered">
+                <article class="tile is-child notification is-info">
+                    <div class="content>">
+                        <p class="title is-3">Current Weather</p>
+                        <!--Place the interactive layout for the API here-->
+                        <div class="content">
+                            <!-- inquire of what the zip of weather update -->
+                            <input class="input zip" type="text" placeholder="Your Zip Code" id="zip">
+                            </input>
+                            <button class=" button submit">Submit</button>
+                            <!-- where the weather for that zip will display -->
+                            <div id="weather" class="container block">
+                                <h3>Temperature (°F):
+                                    <span class="weatherRes" style="color:green"></span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </article> 
             </div>
         </div>
     </div>
