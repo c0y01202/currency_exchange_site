@@ -10,100 +10,128 @@
 </head>
 
 <body>
-                <!--Acts as Header-->
-<section class="section">
+
     <div class="container">
         <section class="hero is-small is-primary">
             <div class="hero-body">
                 <h1 class="title has-text-centered has-text-weight-bold is-size-1"> SIMPLE CURRENCY EXCHANGE</h1>
+                <nav class="secondary_header" id="menu">
+
+                </nav>
             </div>
         </section>
-</section>
-
+    </div>
 
 <section class="section">
-    <div class="container block">
-            <!--Add content to the lines of text below-->
-            <article class="left_article">
-                <h1 class="title is-3">Currency Exchange</h1>
-                 <!--Place the interactive layout for the API here-->
-                    <div class="container control">
+    <div class="container block box">
+        <div class="field container">
+            <div class="control block">
+                <!--Add content to the lines of text below-->
+
+                <article class="left_article">
+                    <h3 class="title is-3">Currency Exchange API</h3>
+                    <!--Place the interactive layout for the API here-->
+                    <div class="container">
                         <!-- what value is to be converted -->
                         Value to Convert:
                         <br>
-                        <input class="input is-normal" style="width:35%" type="text" placeholder="0.00" id="inputVal">
+                        <input class="input is-normal" style="width: 38%;" type="text" placeholder="0.00" id="inputVal">
                         </input>
                     </div>
-            <figure class="image" id="globe">
-                <img src="./assets/images/main_placeholder.png">
-            </figure>
-        
-        <!-- where the information is to be selected -->                       
-        <nav class="level">
-                <div class="level-left">
-                    <p class="control is-5">
-                            <!-- first dropdown -->
-                        <div class="select ">
-                            From: <select class="dDown1 ">
-                                <option value=""> Select One... </option>
-                                <option value="USD">USD (United States Dollar)</option>
-                                <option value="RUB">RUB (Russian Ruble)</option>
-                                <option value="CAD">CAD (Canadian Dollar)</option>
-                                <option value="GBP">GBP (British Pound Sterling)</option>
-                            </select>
-                        </div>
+            </div>
+        </div>
+
+      <!-- where the information is to be selected -->                       
+      <div class="control block">
+        <p class="control">
+            <!-- first dropdown -->                                                <div class="select ">
+            From: <select class="dDown1 ">
+                        <option value=""> Select One... </option>
+                        <option value="USD">USD (United States Dollar)</option>
+                        <option value="RUB">RUB (Russian Ruble)</option>
+                        <option value="CAD">CAD (Canadian Dollar)</option>
+                        <option value="GBP">GBP (British Pound Sterling)</option>
+                    </select>
+    </div>
             
-                            <!-- second dropdown -->
-                        <div class="select">
-                            To: <select class="dDown2 column">
-                                 <option value=""> Select One... </option>
-                                 <option value="USD">USD (United States Dollar)</option>
-                                 <option value="RUB">RUB (Russian Ruble)</option>
-                                 <option value="CAD">CAD (Canadian Dollar)</option>
-                                 <option value="GBP">GBP (British Pound Sterling)</option>
-                            </select>
+            <!-- second dropdown -->
+        <div class="select">
+            To: <select class="dDown2 column">
+                         <option value=""> Select One... </option>
+                         <option value="USD">USD (United States Dollar)</option>
+                         <option value="RUB">RUB (Russian Ruble)</option>
+                         <option value="CAD">CAD (Canadian Dollar)</option>
+                         <option value="GBP">GBP (British Pound Sterling)</option>
+                    </select>
                         </div>
-                    </p>
-                </div>
-                <div class="level-item">
-                    <p class="control">
-                        <!-- listener point -->
-                        <button class="button convert">Convert</button>
-                        <button class="button" onclick="reset()">Reset</button>
-                    </p>
-                </div>
-                
-            </div> 
-        
-            <div id="displayConv" class="container">
-                <p class="control>">
-                    <h3> Result:
-                        <span class="conversionVal" style="color:blue;">
-                        </span>
-                    </h3>
+            </p>
+        </div>
+
+        <div class="field container">
+            <div class="control block">
+                <p class="control">
+                    <!-- listener point -->
+                    <button class="button convert">Convert</button>
+                    <button class="button" onclick="reset()">Reset</button>
                 </p>
             </div>
-        </nav>
+        </div>
+
+        <div id="displayConv" class="control block">
+            <p class="control block">
+                <h3> Result:
+                    <span class="conversionVal" style="color:#00FF80;">
+                    </span>
+                </h3>
+            </p>
+        </div>
+
+        <div class="globe-image">
+            <figure class="image" id="globe">
+                <img src="./assets/images/main_placeholder.png" alt="image of globe with canada, the usa, great britian, and russia marked">
+            </figure>
+        </div>
+    </div>
 </article>
 </section>
+    
+    <section>
+            <div class="content container box has-background-grey-light">
+                <p class="title is-3 has-text-black-bis">Current Weather</p>
+                    <!--Place the interactive layout for the API here-->
+                <div class="content block">
+                    <!-- inquire of what the zip of weather update -->
+                    <div class="control block">
+                        <input class="input zip" type="text" placeholder="Your Zip Code" id="zip">
+                        </input>
+                    </div>
+                    <div class="control block">
+                        <button class=" button submit">Submit</button>
+                    </div>
+                    <!-- where the weather for that zip will display -->
+                    <div id="weather" class="container block">
+                        <h3 class= "has-text-black-bis"> Temperature (°F):
+                            <span class="weatherRes" style="color:#00FF80"></span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+    </section>
 
-
-<section class="section">
-    <div class="container block">
-        <div class="tile is-ancestor">
-            <div class="tile is-3 is-vertical is-parent has-text-centered">
-                <h1 class="title is-3">Currencies Explained</h1>
-                 <div class="tile is-child box">
+    <section class="section">
+        <div class="container">
+            <div class="tile is-ancestor">
+                <div class="tile is-12 is-parent has-text-centered">
+                <div class="tile is-child box">
                     <p class="thumbnail_align"> <img src="assets/images/united-states.png" alt="" class="thumbnail" /> </p>
                     <h4>USD: &#36;</h4>
-                     <p>The US Dollar is divided into 100 cents. The U.S. dollar is predominantly the standard currency unit in which goods are quoted and traded in the global communithy markets.</p>
-                 </div>
+                    <p>The US Dollar is divided into 100 cents. The U.S. dollar is predominantly the standard currency unit in which goods are quoted and traded in the global communithy markets.</p>
+                </div>
                 <div class="tile is-child box">
                     <p class="thumbnail_align"> <img src="assets/images/canada.png" alt="" class="thumbnail" /> </p>
                     <h4>CAD: &#36;</h4>
                     <p>The Canadian dollar is divided into 100 cents. It accounts for approximately 2% of global reserves</p>
                 </div>
-        
                 <div class="tile is-child box">
                     <p class="thumbnail_align"> <img src="assets/images/united-kingdom.png" alt="" class="thumbnail" /> </p>
                     <h4>GBP: &#163;</h4>
@@ -111,36 +139,17 @@
                 </div>
                 <div class="tile is-child box">
                     <p class="thumbnail_align"> <img src="assets/images/russia.png" alt="" class="thumbnail" /> </p>
-                    <h4>RUB: &#8381;</h4>
-                    <p>The Russian ruble is subdivided into 100 kopeks. The ruble is the 17th most traded commodity in the world.</p>
+                        <h4>RUB: &#8381;</h4>
+                        <p>The Russian ruble is subdivided into 100 kopeks. The ruble is the 17th most traded commodity in the world.
+                </div>
                 </div>
             </div>
-            <div class="tile is-parent has-text-centered">
-                <article class="tile is-child notification is-info">
-                    <div class="content>">
-                        <p class="title is-3">Current Weather</p>
-                        <!--Place the interactive layout for the API here-->
-                        <div class="content">
-                            <!-- inquire of what the zip of weather update -->
-                            <input class="input zip" type="text" placeholder="Your Zip Code" id="zip">
-                            </input>
-                            <button class=" button submit">Submit</button>
-                            <!-- where the weather for that zip will display -->
-                            <div id="weather" class="container block">
-                                <h3>Temperature (°F):
-                                    <span class="weatherRes" style="color:green"></span>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </article> 
-            </div>
         </div>
-    </div>
-</section>
+    </section>
+
 
        
-        <footer class="secondary_header footer container block">
+        <footer class="secondary_header footer container block is-primary has-text-centered">
             <div class="copyright">&copy;2022 - <strong>Group 2 Authors: Claudia Chittim, Amanda Hernandez and Michael
           Gaytan</strong></div>
         </footer>

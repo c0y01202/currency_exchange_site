@@ -306,6 +306,9 @@ h3 {
   font-size: 100%;
   font-weight: 400;
 }
+#result-p {
+  margin-top: 30%;
+}
 ul {
   list-style: none;
 }
@@ -2920,8 +2923,8 @@ fieldset[disabled] .button {
 #globe img {
   width: 35%;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 30px;
+  right: 70px;
   border-radius: 290486px;
 }
 
@@ -8641,7 +8644,7 @@ label.panel-block:hover {
 }
 .tile {
   align-items: stretch;
-  display: block;
+  display: inline-block;
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
@@ -8686,7 +8689,7 @@ label.panel-block:hover {
   }
   .tile.is-3 {
     flex: none;
-    width: 25%;
+    width: 20%;
   }
   .tile.is-4 {
     flex: none;
@@ -9515,7 +9518,7 @@ label.panel-block:hover {
   }
 }
 .footer {
-  background-color: #282f2f;
+  background-color: #375a7f;
   padding: 3rem 1.5rem 6rem;
 }
 h6 {
