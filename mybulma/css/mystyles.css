@@ -43,7 +43,7 @@
   content: " ";
   display: block;
   height: 0.625em;
-  margin-top: -0.4375em;
+  margin-top: 1em;
   pointer-events: none;
   position: absolute;
   top: 50%;
@@ -168,48 +168,7 @@
   position: relative;
   width: 1em;
 }
-.hero-video,
-.image.is-16by9 .has-ratio,
-.image.is-16by9 img,
-.image.is-1by1 .has-ratio,
-.image.is-1by1 img,
-.image.is-1by2 .has-ratio,
-.image.is-1by2 img,
-.image.is-1by3 .has-ratio,
-.image.is-1by3 img,
-.image.is-2by1 .has-ratio,
-.image.is-2by1 img,
-.image.is-2by3 .has-ratio,
-.image.is-2by3 img,
-.image.is-3by1 .has-ratio,
-.image.is-3by1 img,
-.image.is-3by2 .has-ratio,
-.image.is-3by2 img,
-.image.is-3by4 .has-ratio,
-.image.is-3by4 img,
-.image.is-3by5 .has-ratio,
-.image.is-3by5 img,
-.image.is-4by3 .has-ratio,
-.image.is-4by3 img,
-.image.is-4by5 .has-ratio,
-.image.is-4by5 img,
-.image.is-5by3 .has-ratio,
-.image.is-5by3 img,
-.image.is-5by4 .has-ratio,
-.image.is-5by4 img,
-.image.is-9by16 .has-ratio,
-.image.is-9by16 img,
-.image.is-square .has-ratio,
-.image.is-square img,
-.is-overlay,
-.modal,
-.modal-background {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+
 .button,
 .file-cta,
 .file-name,
@@ -342,14 +301,13 @@ ul {
   margin: 0;
   padding: 0;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
+
+h3 {
+  font-size: 1.5em;
   font-weight: 400;
+}
+#result-p {
+  margin-top: 30%;
 }
 ul {
   list-style: none;
@@ -2962,130 +2920,14 @@ fieldset[disabled] .button {
   height: 3rem;
   width: 3rem;
 }
-.image {
-  display: block;
-  position: relative;
-}
-.image img {
-  display: block;
-  height: auto;
-  width: 100%;
-}
-.image img.is-rounded {
+#globe img {
+  width: 35%;
+  position: absolute;
+  top: 30px;
+  right: 70px;
   border-radius: 290486px;
 }
-.image.is-fullwidth {
-  width: 100%;
-}
-.image.is-16by9 .has-ratio,
-.image.is-16by9 img,
-.image.is-1by1 .has-ratio,
-.image.is-1by1 img,
-.image.is-1by2 .has-ratio,
-.image.is-1by2 img,
-.image.is-1by3 .has-ratio,
-.image.is-1by3 img,
-.image.is-2by1 .has-ratio,
-.image.is-2by1 img,
-.image.is-2by3 .has-ratio,
-.image.is-2by3 img,
-.image.is-3by1 .has-ratio,
-.image.is-3by1 img,
-.image.is-3by2 .has-ratio,
-.image.is-3by2 img,
-.image.is-3by4 .has-ratio,
-.image.is-3by4 img,
-.image.is-3by5 .has-ratio,
-.image.is-3by5 img,
-.image.is-4by3 .has-ratio,
-.image.is-4by3 img,
-.image.is-4by5 .has-ratio,
-.image.is-4by5 img,
-.image.is-5by3 .has-ratio,
-.image.is-5by3 img,
-.image.is-5by4 .has-ratio,
-.image.is-5by4 img,
-.image.is-9by16 .has-ratio,
-.image.is-9by16 img,
-.image.is-square .has-ratio,
-.image.is-square img {
-  height: 100%;
-  width: 100%;
-}
-.image.is-1by1,
-.image.is-square {
-  padding-top: 100%;
-}
-.image.is-5by4 {
-  padding-top: 80%;
-}
-.image.is-4by3 {
-  padding-top: 75%;
-}
-.image.is-3by2 {
-  padding-top: 66.6666%;
-}
-.image.is-5by3 {
-  padding-top: 60%;
-}
-.image.is-16by9 {
-  padding-top: 56.25%;
-}
-.image.is-2by1 {
-  padding-top: 50%;
-}
-.image.is-3by1 {
-  padding-top: 33.3333%;
-}
-.image.is-4by5 {
-  padding-top: 125%;
-}
-.image.is-3by4 {
-  padding-top: 133.3333%;
-}
-.image.is-2by3 {
-  padding-top: 150%;
-}
-.image.is-3by5 {
-  padding-top: 166.6666%;
-}
-.image.is-9by16 {
-  padding-top: 177.7777%;
-}
-.image.is-1by2 {
-  padding-top: 200%;
-}
-.image.is-1by3 {
-  padding-top: 300%;
-}
-.image.is-16x16 {
-  height: 16px;
-  width: 16px;
-}
-.image.is-24x24 {
-  height: 24px;
-  width: 24px;
-}
-.image.is-32x32 {
-  height: 32px;
-  width: 32px;
-}
-.image.is-48x48 {
-  height: 48px;
-  width: 48px;
-}
-.image.is-64x64 {
-  height: 64px;
-  width: 64px;
-}
-.image.is-96x96 {
-  height: 96px;
-  width: 96px;
-}
-.image.is-128x128 {
-  height: 128px;
-  width: 128px;
-}
+
 .notification {
   border-radius: 0.4em;
   padding: 1.25rem 2.5rem 1.25rem 1.5rem;
@@ -5245,7 +5087,8 @@ button.dropdown-item.is-active {
 }
 .level-item {
   align-items: center;
-  display: flex;
+  margin-left: 20px;
+  margin-top: 42px;
   justify-content: center;
 }
 .level-item .subtitle,
@@ -8801,7 +8644,7 @@ label.panel-block:hover {
 }
 .tile {
   align-items: stretch;
-  display: block;
+  display: inline-block;
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
@@ -8846,7 +8689,7 @@ label.panel-block:hover {
   }
   .tile.is-3 {
     flex: none;
-    width: 25%;
+    width: 20%;
   }
   .tile.is-4 {
     flex: none;
@@ -9675,8 +9518,8 @@ label.panel-block:hover {
   }
 }
 .footer {
-  background-color: #282f2f;
-  padding: 3rem 1.5rem 6rem;
+  background-color: #375a7f;
+  padding: 1.5rem 1.5rem 3rem;
 }
 h6 {
   text-transform: uppercase;

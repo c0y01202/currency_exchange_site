@@ -32,3 +32,5 @@ https://money.cnn.com/data/currencies/
 
 Authors of this website:
 Claudia Chittim, Michael Gaytan and Amanda Hernandez. Copyright 2022.
+
+![WIP screenshot of the Simple Currency & More Site](./assets/images/final-website.jpg)
