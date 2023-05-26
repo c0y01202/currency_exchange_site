@@ -1,4 +1,5 @@
 ![future site](https://user-images.githubusercontent.com/97765679/159816604-f0a32905-4618-4aca-a3a0-0e8f8ab58b11.png)
+# This application is copyrighted in 2022. PLEASE DO NOT COPY
 # Purpose of Currency Exchange Website Team 2
 
 # User Story
